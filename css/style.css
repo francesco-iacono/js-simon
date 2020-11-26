@@ -12,13 +12,63 @@ body {
   margin: auto;
   font-family: 'Indie Flower', cursive;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  padding: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+.spesa {
+  position: absolute;
+  top: 20px
+  left: 300px;
+}
+.memory {
+  position: relative;
+  width: 190px;
+  background-color: #D5D6D8;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transform: rotate(330deg);
+  margin-right: 40px;
+}
+.memory::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50px;
+  width: 100px;
+  height: 20px;
+  background-color: rgba(246, 246, 225, 0.7);
+  border-radius: 2px;
+  margin: auto;
+}
+.memory img {
+  width: 100%;
+}
 .tab {
+  position: relative;
   width: 300px;
   height: 300px;
   padding: 20px;
   background-color: lightyellow;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   margin-right: 5px;
+}
+.tab::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 200px;
+  height: 30px;
+  background-color: rgba(246, 246, 225, 0.7);
+  border-radius: 2px;
+  margin: auto;
 }
 .tab p {
   padding: 20px 0;
@@ -28,6 +78,8 @@ body {
   margin-left: 5px;
 }
 .pen {
+  position: absolute;
+  top: -3px;
   width: 150px;
 }
 .pen img {
