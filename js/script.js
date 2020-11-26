@@ -20,7 +20,7 @@ $(document).ready(
         numberAlert.push(number);
       }
     }
-    alert(numberAlert);
+    alert('Ricorda i numeri: ' + numberAlert);
     console.log(numberAlert);
    // Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
    var remember = setTimeout(
@@ -37,8 +37,10 @@ $(document).ready(
        i++;
      }
      // Una volta inseriti i 5 numeri, il software dice quanti e quali numeri sono stati ricordati.
-     console.log('Numeri ricordati : ', userArray.length);
-     console.log('Ecco quali sono ', userArray);
+     // console.log('Numeri ricordati : ', userArray.length);
+     $('#point').append('<span>' + userArray.length + '</span>');
+     $('#numbers').append('<span>' + userArray + '</span>');
+     // console.log('Ecco quali sono ', userArray);
      clearInterval(remember)
    }, 3000);
   }
